@@ -1,5 +1,4 @@
 import styles from "./App.module.scss";
-import backgroundPattern from "./assets/images/background-pattern-desktop.svg";
 import starIcon from "./assets/images/icon-star.svg";
 import Accordion from "./components/Accordion";
 import data from "./data/accordion-data.json";
