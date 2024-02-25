@@ -27,7 +27,7 @@ function AccordionItem({
     <div className={styles.item}>
       <div className={styles.title} onClick={() => handleChange()}>
         <h3 className={isActive ? styles.active : undefined}>{values.title}</h3>
-        <img src={isActive ? plus : minus} alt="toggle" />
+        <img src={isActive ? minus : plus} alt="toggle" />
       </div>
       {isActive && <p>{values.content}</p>}
     </div>
