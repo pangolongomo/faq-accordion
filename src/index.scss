@@ -1,0 +1,22 @@
+@import "./assets/sass/variables";
+@font-face {
+  font-family: "Work Sans";
+  src: url("./assets/fonts/WorkSans-VariableFont_wght.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-family: "Work Sans";
+  line-height: 1.5;
+  font-weight: 400;
+  color: hsl(292, 42%, 14%);
+  background-color: $light-pink;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
