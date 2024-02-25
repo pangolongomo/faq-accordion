@@ -1,6 +1,7 @@
 import styles from "./AccordionItem.module.scss";
 import minus from "../../../assets/images/icon-minus.svg";
 import plus from "../../../assets/images/icon-plus.svg";
+import { Dispatch, SetStateAction } from "react";
 type AccordionProps = {
   values: {
     id: number;
@@ -9,7 +10,7 @@ type AccordionProps = {
   };
   key: number;
   activeIndex: number;
-  setActiveIndex(a: number): void;
+  setActiveIndex: Dispatch<SetStateAction<number>>;
 };
 
 function AccordionItem({
@@ -20,7 +21,7 @@ function AccordionItem({
   const isActive = activeIndex === values.id;
 
   function handleChange() {
-    setActiveIndex(values.id);
+    setActiveIndex(activeIndex !== values.id ? values.id : -1);
   }
   return (
     <div className={styles.item}>
