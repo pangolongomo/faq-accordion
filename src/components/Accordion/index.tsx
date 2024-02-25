@@ -1,3 +1,4 @@
+import { useState } from "react";
 import AccordionItem from "./content/AccordionItem";
 
 type AccordionElement = {
@@ -11,10 +12,17 @@ type AccordionProps = {
 };
 
 function Accordion({ data }: AccordionProps) {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <div>
       {data.map((e) => (
-        <AccordionItem key={e.id} values={e} />
+        <AccordionItem
+          key={e.id}
+          values={e}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        />
       ))}
     </div>
   );

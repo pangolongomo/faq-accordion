@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "./AccordionItem.module.scss";
 import minus from "../../../assets/images/icon-minus.svg";
 import plus from "../../../assets/images/icon-plus.svg";
@@ -9,13 +8,19 @@ type AccordionProps = {
     content: string;
   };
   key: number;
+  activeIndex: number;
+  setActiveIndex(a: number): void;
 };
 
-function AccordionItem({ values }: AccordionProps) {
-  const [isActive, setIsActive] = useState(false);
+function AccordionItem({
+  values,
+  activeIndex,
+  setActiveIndex,
+}: AccordionProps) {
+  const isActive = activeIndex === values.id;
 
   function handleChange() {
-    setIsActive((prevActive) => !prevActive);
+    setActiveIndex(values.id);
   }
   return (
     <div className={styles.item}>
