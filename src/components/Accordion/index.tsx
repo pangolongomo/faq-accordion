@@ -8,11 +8,11 @@ type AccordionElement = {
 };
 
 type AccordionProps = {
-  data: Array<AccordionElement>;
+  data: AccordionElement[];
 };
 
 function Accordion({ data }: AccordionProps) {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
     <div>
